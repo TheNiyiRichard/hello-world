@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap');
+
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+  button{
+	width: 180px;
+	height: 40px;
+    color: rgb(0, 0, 0);
+	border-radius: 10px;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+    display: grid;
+    height: calc(100dvh - 50px - 50px);
+}
+
+.flexbox {
+    display: flex;
+}
+
+header {
+    background-color: transparent;
+    height: 50px;
+    overflow: hidden;
+}
+
+header div {
+    width: 60%;
+}
+
+nav {
+    width: 60%;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 50px ;
+}
+
+nav ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 0.5rem
+    
+}
+
+/* CSS pseudoclass */
+nav ul li a:hover {
+    color: cornflowerblue;
+}
+
+nav ul li + li {
+    margin-left: 20px;
+}
+
